@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CODEwithZAKI", "CODEwithZAKI\CODEwithZAKI.csproj", "{FEFC8FAE-EF6D-4FF7-8D7E-D2DEF60BD214}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEFC8FAE-EF6D-4FF7-8D7E-D2DEF60BD214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFC8FAE-EF6D-4FF7-8D7E-D2DEF60BD214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFC8FAE-EF6D-4FF7-8D7E-D2DEF60BD214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFC8FAE-EF6D-4FF7-8D7E-D2DEF60BD214}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0C5B8D0-7D36-42D6-9A2C-4BC34FF8C40B}
+	EndGlobalSection
+EndGlobal
