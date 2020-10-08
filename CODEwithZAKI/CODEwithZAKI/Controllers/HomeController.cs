@@ -16,5 +16,9 @@ namespace CODEwithZAKI.Controllers
         {
             return View();
         }
+        public ViewResult ContactUs()
+        {
+            return View();
+        }
     }
 }

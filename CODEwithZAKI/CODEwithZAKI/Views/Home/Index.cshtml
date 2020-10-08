@@ -9,9 +9,28 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
 </head>
-<body>
-    <h1>Welcome to Book Store Application</h1>
-    <p>This is the Home page of BookStore</p>
+<body class="container">
+    <h1 class="h1">Welcome to Book Store Application</h1>
+    <input type="button" value="click me" class="btn-danger" />
+    <h1>@DateTime.Now.ToString("dd-mm-yyyy")</h1>
+    @for (int i = 0; i < 10; i++)
+    {
+        <p>This is the Home page of BookStore</p>
+    }
+    @{
+        var list = new List<int>() { 1, 2, 3, 4, 5 };
+    }
+    @foreach (var item in list)
+    {
+        <h1>@item</h1>
+    }
 </body>
+<script src="~/lib/jquery/jquery.js"></script>
 </html>
+<script>
+    $(document).ready(function () {
+        alert("Page Loaded");
+    });
+</script>
