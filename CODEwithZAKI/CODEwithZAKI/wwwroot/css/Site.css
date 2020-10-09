@@ -1,7 +1,34 @@
 ﻿body {
 }
-.logo
-{
-    height:200px;
-    width:100px;
+.h1{
+    border:dotted;
+    font-family:'Agency FB';
+    color:red;
+}
+.logo{
+    width:300px;
+}
+.cade{
+    border: dotted;
+    font-family: 'Agency FB';
+    color: blue;
+}
+
+.col-sm-4 {
+    padding-bottom: 5em;
+    color:blue;
+}
+
+.dhible {
+   
+    background-color: white;
+    
+    height: 350px;
+    padding: 4rem 1rem;
+    margin-bottom: 2rem;
+    
+    border-radius: 0.3rem;
+}
+.cadee{
+    color:blue;
 }

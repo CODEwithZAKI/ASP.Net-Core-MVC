@@ -1,36 +1,81 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
+<section class="dhible  text-center">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
-</head>
-<body class="container">
-    <h1 class="h1">Welcome to Book Store Application</h1>
-    <input type="button" value="click me" class="btn-danger" />
-    <h1>@DateTime.Now.ToString("dd-mm-yyyy")</h1>
-    @for (int i = 0; i < 10; i++)
-    {
-        <p>This is the Home page of BookStore</p>
-    }
-    @{
-        var list = new List<int>() { 1, 2, 3, 4, 5 };
-    }
-    @foreach (var item in list)
-    {
-        <h1>@item</h1>
-    }
-</body>
-<script src="~/lib/jquery/jquery.js"></script>
-</html>
-<script>
-    $(document).ready(function () {
-        alert("Page Loaded");
-    });
-</script>
+    <div class="container">
+        <h1>Welcome to Bookstore</h1>
+        <p class="lead text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+            <a href="#" class="btn btn-primary my-2">Search books</a>
+        </p>
+    </div>
+    
+</section>
+<div class="container">
+    <h3 class="cadee">Top Books</h3>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top img-fluid" src="/images/thumb5.svg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
+                        </div>
+                        <small class="text-muted">Author Name</small>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top img-fluid" src="~/images/thumb5.svg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer..</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
+                        </div>
+                        <small class="text-muted">Author Name</small>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top img-fluid" src="~/images/thumb5.svg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">
+                        This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
+                        </div>
+                        <small class="text-muted">Author Name</small>
+                        <p></p>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+            <br />
+            <p> </p>
+        </div>
+        </div>
+    </div>
+        <br />
