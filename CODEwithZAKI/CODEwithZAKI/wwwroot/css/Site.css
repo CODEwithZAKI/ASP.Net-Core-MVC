@@ -15,7 +15,7 @@
 }
 
 .col-sm-4 {
-    padding-bottom: 5em;
+    padding-bottom: 1em;
     color:blue;
 }
 
@@ -30,5 +30,47 @@
     border-radius: 0.3rem;
 }
 .cadee{
+    color:blue;
+}
+.card {
+    
+    padding-bottom: 1em;
+}
+.btn{
+    margin-left:4px;
+}
+.author {
+    margin-left: 110px;
+}
+.card-title {
+    margin-left: 4px;
+}
+.card-text {
+    margin-left: 4px;
+}
+
+
+.photo1 {
+    margin-left: 100px;
+}
+.form-inline {
+    margin-right: 100px;
+}
+.footer{
+    position:absolute;
+    
+   
+    width:100%;
+    white-space:nowrap;
+    line-height:50px;
+}
+.footer1 {
+    position: absolute;
+    
+    width: 100%;
+    white-space: nowrap;
+    line-height: 50px;
+}
+.copyright{
     color:blue;
 }

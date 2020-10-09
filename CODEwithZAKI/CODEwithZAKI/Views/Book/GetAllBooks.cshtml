@@ -1,17 +1,33 @@
-﻿
+﻿@using CODEwithZAKI.Models
+@model IEnumerable<BookModel>
 @{
-    Layout = null;
+    Layout = "_GetBooksLayout";
 }
 
-<!DOCTYPE html>
+<div class="container">
+    <h3 class="cadee">All Books</h3>
+    <div class="row">
+        @foreach (var books in Model)
+	{
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top img-fluid" src="/images/thumb5.svg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">@books.Title</h4>
+                    <p class="card-text">@books.Description</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
+                        </div>
+                        <small class=" author text-muted">@books.Author</small>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+	}
+        
+     </div>
+</div>
+        
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>GetAllBooks</title>
-</head>
-<body>
-    <h1>Get all the books</h1>
-    <button>click me</button>
-</body>
-</html>
