@@ -66,11 +66,23 @@
 }
 .footer1 {
     position: absolute;
-    
+    bottom:0;
     width: 100%;
     white-space: nowrap;
     line-height: 50px;
 }
 .copyright{
     color:blue;
+}
+.carousel {
+    width: 450px;
+   
+    margin-right:-50px;
+}
+
+.display-4{
+    
+}
+.cumar{
+    margin-left:-100px;
 }
