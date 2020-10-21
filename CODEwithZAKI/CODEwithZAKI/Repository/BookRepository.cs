@@ -1,4 +1,5 @@
-﻿using CODEwithZAKI.Models;
+﻿using CODEwithZAKI.Data;
+using CODEwithZAKI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,26 @@ namespace CODEwithZAKI.Repository
 {
     public class BookRepository
     {
+        private readonly BookStoreContext _context = null;
+        public BookRepository(BookStoreContext context)
+        {
+            _context = context;
+        }
+        public async Task<int> AddNewBook(BookModel bookModel)
+        {
+            var newBook = new Books()
+            {
+                Author = bookModel.Author,
+                CreatedOn=DateTime.UtcNow,
+                Description=bookModel.Description,
+                Title=bookModel.Title,
+                TotalPages=bookModel.TotalPages,
+                UpdatedOn=DateTime.UtcNow
+            };
+           await _context.Books.AddAsync(newBook);
+           await _context.SaveChangesAsync();
+            return newBook.Id;
+        }
         public List<BookModel> GetAllBooks()
         {
             return DataSource();

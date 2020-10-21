@@ -8,12 +8,14 @@ namespace CODEwithZAKI.Controllers
 {
     public class HomeController : Controller
     {
+        [ViewData]
+        public string CustomProperty { get; set; }
+        [ViewData]
+        public string Title { get; set; }
+
         public ViewResult Index()
         {
-            dynamic data = new ExpandoObject();
-            data.Id = 1;
-            data.name = "zakicade";
-            ViewBag.Data = data;
+            
             return View();
         }
         public ViewResult AboutUs()

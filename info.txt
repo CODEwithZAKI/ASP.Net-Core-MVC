@@ -1,0 +1,49 @@
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Relational
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+ZAKI\OMAR
+
+private readonly HomeRepository _homeRepository = null;
+        public HomeController(HomeRepository newhomeRepository)
+        {
+            _homeRepository = newhomeRepository;
+        }
+        public ViewResult Index(bool isSuccess=false)
+        {
+            ViewBag.isSuccess = isSuccess;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Index(HomeModel bookModel)
+        {
+            int id = _homeRepository.Index(bookModel);
+            if (id > 0)
+            {
+                return RedirectToAction(nameof(Index), new { isSuccess = true});
+            }
+            return View();
+        }
+
+
+private readonly DataContext _context = null;
+        public HomeRepository(DataContext context)
+        {
+            _context = context;
+        }
+        public int Index(HomeModel homeModel)
+        {
+            var newmodel = new SecondModel()
+            {
+                Id = homeModel.Id,
+                
+                Name = homeModel.Name,
+                
+            };
+            _context.Books.Add(newmodel);
+            _context.SaveChanges();
+            return newmodel.Id;
+        }
+    }
+

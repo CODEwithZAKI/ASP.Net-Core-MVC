@@ -1,4 +1,7 @@
-﻿
+﻿@{
+    ViewData["Title"] = "GetBooks";
+
+}
 @model IEnumerable<BookModel>
 
 
@@ -15,7 +18,7 @@
                         <p class="card-text">@books.Description</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a href="/book/getbook/@books.Id" class="btn btn-sm btn-outline-secondary">View Details</a>
+                                <a asp-controller="book" asp-action="getbook" asp-route-id="@books.Id" class="btn btn-sm btn-outline-secondary">View Details</a>
                             </div>
                             <small class=" author text-muted">@books.Author</small>
                             <p></p>
