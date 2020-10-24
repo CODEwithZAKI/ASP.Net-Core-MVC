@@ -1,5 +1,7 @@
 ﻿using CODEwithZAKI.Data;
 using CODEwithZAKI.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,20 +24,62 @@ namespace CODEwithZAKI.Repository
                 CreatedOn=DateTime.UtcNow,
                 Description=bookModel.Description,
                 Title=bookModel.Title,
-                TotalPages=bookModel.TotalPages,
+                TotalPages=bookModel.TotalPages.HasValue ? bookModel.TotalPages.Value:0,
                 UpdatedOn=DateTime.UtcNow
             };
            await _context.Books.AddAsync(newBook);
            await _context.SaveChangesAsync();
             return newBook.Id;
         }
-        public List<BookModel> GetAllBooks()
+        public async Task<List<BookModel>> GetAllBooks()
         {
-            return DataSource();
+            var books = new List<BookModel>();
+            var allbooks = await _context.Books.ToListAsync();
+            if(allbooks?.Any()==true)
+            {
+                foreach (var book in allbooks)
+                {
+                    if (book.Title== "Asp.Net")
+                    {
+                        
+                    }
+                        books.Add(new BookModel()
+                        {
+
+                            Author = book.Author,
+                            Id = book.Id,
+                            Title = book.Title,
+                            TotalPages = book.TotalPages,
+                            Category = book.Category,
+                            Description = book.Description,
+                            Language = book.Language
+                        });
+                    
+                    
+                    
+                }
+                          
+            }
+            return books;
         }
-        public BookModel GetBookById(int id)
+        public async Task< BookModel> GetBookById(int id)
         {
-            return DataSource().Where(x => x.Id == id).FirstOrDefault();
+            var book = await _context.Books.FindAsync(id);
+            if (book != null)
+            {
+                var bookDetails = new BookModel()
+                {
+                    Author = book.Author,
+                    Id = book.Id,
+                    Title = book.Title,
+                    TotalPages = book.TotalPages,
+                    Category = book.Category,
+                    Description = book.Description,
+                    Language = book.Language
+                };
+                return bookDetails;
+            }
+            return null;
         }
         public List<BookModel> SearchBook(string title,string authorName)
         {
